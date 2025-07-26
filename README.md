@@ -1,4 +1,6 @@
-# Terraform Provider Debug (Terraform Plugin Framework)
+# Terraform Provider Debug
+
+The Debug provider is a Terraform provider which has various gelpful utilites for debugging and inspecting remotely-exxecuted runs in Terraform Enterprise.
 
 ## Requirements
 
@@ -14,20 +16,6 @@
 ```shell
 go install
 ```
-
-## Adding Dependencies
-
-This provider uses [Go modules](https://github.com/golang/go/wiki/Modules).
-Please see the Go documentation for the most up to date information about using Go modules.
-
-To add a new dependency `github.com/author/dependency` to your Terraform provider:
-
-```shell
-go get github.com/author/dependency
-go mod tidy
-```
-
-Then commit the changes to `go.mod` and `go.sum`.
 
 ## Using the provider
 
@@ -48,11 +36,3 @@ In order to run the full suite of Acceptance tests, run `make testacc`.
 ```shell
 make testacc
 ```
-
-TODO
-
-command data source
-env resource
-memory_hog resource
-write logs
-large state file
