@@ -53,6 +53,7 @@ func (p *DebugProvider) Resources(ctx context.Context) []func() resource.Resourc
 		NewFailureResource,
 		NewSleepResource,
 		NewCommandResource,
+		NewHTTPGetResource,
 	}
 }
 
