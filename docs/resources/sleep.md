@@ -3,12 +3,12 @@
 page_title: "debug_sleep Resource - debug"
 subcategory: ""
 description: |-
-  Sleep resource
+  The sleep resource allows you to pause execution for a specified duration during create, update, or destroy operations. This can be useful for simulating long-running operations or for inspecting the run environment during a Terraform run.
 ---
 
 # debug_sleep (Resource)
 
-Sleep resource
+The sleep resource allows you to pause execution for a specified duration during create, update, or destroy operations. This can be useful for simulating long-running operations or for inspecting the run environment during a Terraform run.
 
 
 

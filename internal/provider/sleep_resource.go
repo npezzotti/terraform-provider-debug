@@ -90,7 +90,7 @@ func (r *SleepResource) Create(ctx context.Context, req resource.CreateRequest, 
 	}
 
 	tflog.Info(ctx, "Sleeping for duration", map[string]interface{}{
-		"duration": durString,
+		"duration": duration.String(),
 	})
 
 	err = sleep(ctx, duration)
@@ -137,7 +137,7 @@ func (r *SleepResource) Update(ctx context.Context, req resource.UpdateRequest, 
 		}
 
 		tflog.Info(ctx, "Sleeping for duration", map[string]interface{}{
-			"duration": durString,
+			"duration": duration.String(),
 		})
 
 		err = sleep(ctx, duration)
@@ -178,7 +178,7 @@ func (r *SleepResource) Delete(ctx context.Context, req resource.DeleteRequest, 
 	}
 
 	tflog.Info(ctx, "Sleeping for duration", map[string]interface{}{
-		"duration": durString,
+		"duration": duration.String(),
 	})
 
 	err = sleep(ctx, duration)

@@ -72,6 +72,7 @@ func (p *DebugProvider) DataSources(ctx context.Context) []func() datasource.Dat
 		NewFileContentDataSource,
 		NewFailureDataSource,
 		NewSystemInfoDataSource,
+		NewSleepDataSource,
 	}
 }
 
