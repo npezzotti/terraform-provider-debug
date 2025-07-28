@@ -38,7 +38,8 @@ func (r *SleepResource) Metadata(ctx context.Context, req resource.MetadataReque
 
 func (r *SleepResource) Schema(ctx context.Context, req resource.SchemaRequest, resp *resource.SchemaResponse) {
 	resp.Schema = schema.Schema{
-		MarkdownDescription: "Sleep resource",
+		MarkdownDescription: "The sleep resource allows you to pause execution for a specified duration during create, update, or destroy operations. " +
+			"This can be useful for simulating long-running operations or for inspecting the run environment during a Terraform run.",
 
 		Attributes: map[string]schema.Attribute{
 			"duration": schema.StringAttribute{
