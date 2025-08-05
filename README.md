@@ -19,7 +19,16 @@ go install
 
 ## Using the provider
 
-Fill this in for each provider
+To use this provider in Terraform Enterprise, build it and place it in a terraform.d directory in the working directory of the Terraform configuration.
+
+* Create the directory structure (assuming the `examples` directory and `failure` example in this repository)
+```
+mkdir -p examples/resources/failure/terraform.d/plugins/registry.terraform.io/npezzotti/debug/1.0.0/linux_amd64
+```
+* Build the binary
+```
+GOOS=linux GOARCH=amd64 go build -o examples/resources/failure/terraform.d/plugins/registry.terraform.io/npezzotti/debug/1.0.0/linux_amd64 ./...
+```
 
 ## Developing the Provider
 
