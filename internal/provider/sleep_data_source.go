@@ -68,13 +68,11 @@ func (d *SleepDataSource) Read(ctx context.Context, req datasource.ReadRequest, 
 		"duration": duration.String(),
 	})
 
-	select {
-	case <-ctx.Done():
+	if err := sleep(ctx, duration); err != nil {
 		resp.Diagnostics.AddError(
-			"Sleep Failed",
-			"An error occurred while sleeping: "+ctx.Err().Error(),
+			"Sleep Error",
+			"An error occurred while sleeping: "+err.Error(),
 		)
 		return
-	case <-time.After(duration):
 	}
 }
